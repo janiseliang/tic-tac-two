@@ -1,4 +1,4 @@
-# C implementation and solver for tic-tac-two
+# Implementation and solver for tic-tac-two
 
 ### Game description:
 - Two players take turns placing their pieces on a 3-by-3 grid (similar to regular tic-tac-toe)
