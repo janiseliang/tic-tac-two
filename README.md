@@ -6,4 +6,4 @@
 - Player claims square when they are the first to get 2 of their own piece on the square
 
 ### Updates:
-9/30/20 (janise): uploaded tic tac toe solver and Game abstract class to use as base code
+9/30/20 (janise): uploaded tic tac toe, solver, and Game abstract class to use as base code
