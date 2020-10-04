@@ -136,21 +136,22 @@ public class Solver {
         } else {
             System.out.println("(symmetries not removed):");
         }
-        System.out.println("Remote\tWin\tLose\tTie\tTotal");
+        System.out.println("Remote  Win      Lose     Tie      Total");
         System.out.println("----------------------------------------");
         int winTotal = 0, loseTotal = 0, tieTotal = 0, total = 0;
         for (Integer i : results.descendingKeySet()) {
             Integer[] arr = results.get(i);
             int sum = arr[0] + arr[1] + arr[2];
-            System.out.println(i.toString() + "\t" + arr[0].toString() + "\t" + arr[1].toString() + "\t"
-                    + arr[2].toString() + "\t" + sum);
+            System.out.printf("%-3d     %-7d  %-7d  %-7d  %-7d\n",
+                    i, arr[0], arr[1], arr[2], sum);
             winTotal += arr[0];
             loseTotal += arr[1];
             tieTotal += arr[2];
             total += sum;
         }
         System.out.println("----------------------------------------");
-        System.out.println("Total\t" + winTotal + "\t" + loseTotal + "\t" + tieTotal + "\t" + total);
+        System.out.printf("%Total   %-7d  %-7d  %-7d  %-7d\n",
+                winTotal, loseTotal, tieTotal, total);
     }
 
     public static void main(String[] args) {

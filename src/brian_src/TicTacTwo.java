@@ -136,8 +136,7 @@ public class TicTacTwo extends TicTacToe{
         }
         // Double moves
         if (hasDoubleMove(board)) {
-            ArrayList<Integer> primaryMoveList = new ArrayList<>();
-            Collections.copy(primaryMoveList, moveList);
+            ArrayList<Integer> primaryMoveList = new ArrayList<>(moveList);
             for (Integer i : primaryMoveList) {
                 for (Integer j : primaryMoveList) {
                     if (i < j) {
