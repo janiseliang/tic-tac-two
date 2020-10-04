@@ -6,7 +6,8 @@
 - Player claims square when they are the first to get 2 of their own piece on the square
 
 ### Current Solve:
-```Tic Tac Two analysis (symmetries removed):
+```
+Tic Tac Two analysis (symmetries removed):
 Remote  Win      Lose     Tie      Total
 ----------------------------------------
 27      0        0        1        1      
@@ -42,7 +43,7 @@ Total   2657551  1101751  590106   4349408
 ```
 
 ### Updates:
-10/3/20 (janise): fixed formatting for output and added capture of current output. will verify correctness and try to optimize -- are there too many positions??
+10/3/20 (janise): fixed formatting for output and added capture of current output. will verify correctness and try to optimize -- currently solves in 58 seconds on my computer
 
 10/2/20 (brian): Uploaded own base code, with possible TT2 implementation. No guarantee it actually works, and definetly not efficient.
 
