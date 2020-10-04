@@ -149,8 +149,8 @@ public class Solver {
             tieTotal += arr[2];
             total += sum;
         }
-        System.out.println("----------------------------------------");
-        System.out.printf("%Total   %-7d  %-7d  %-7d  %-7d\n",
+        System.out.println("------------------------------------------");
+        System.out.printf("Total   %-7d  %-7d  %-7d  %-7d\n",
                 winTotal, loseTotal, tieTotal, total);
     }
 
