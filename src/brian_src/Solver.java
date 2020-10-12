@@ -70,19 +70,19 @@ public class Solver {
                     for (Integer move : moves) {
                         gs = solve(game.doMove(position, move));
                         switch (gs.positionValue()) {
-                            case WIN:
+                            case LOSE:
                             case TIE:
                                 if (states.containsKey(gs.positionValue())) {
-                                    states.put(gs.positionValue(), Math.max(gs.remoteness(), states.get(gs.positionValue())));
+                                    states.put(gs.positionValue(), Math.min(gs.remoteness(), states.get(gs.positionValue())));
                                 } else {
                                     states.put(gs.positionValue(), gs.remoteness());
                                 }
                                 break;
-                            case LOSE:
-                                if (states.containsKey(PositionValue.LOSE)) {
-                                    states.put(PositionValue.LOSE, Math.min(gs.remoteness(), states.get(PositionValue.LOSE)));
+                            case WIN:
+                                if (states.containsKey(PositionValue.WIN)) {
+                                    states.put(PositionValue.WIN, Math.max(gs.remoteness(), states.get(PositionValue.WIN)));
                                 } else {
-                                    states.put(PositionValue.LOSE, gs.remoteness());
+                                    states.put(PositionValue.WIN, gs.remoteness());
                                 }
                                 break;
                         }
@@ -166,7 +166,7 @@ public class Solver {
         s = new brian_src.Solver(ttt, true, "Tic Tac Toe");
         s.detailedAnalysis();*/
         TicTacTwo tttwo = new TicTacTwo();
-        Solver s = new Solver(tttwo, true, "Tic Tac Two");
+        Solver s = new Solver(tttwo, false, "Tic Tac Two");
         s.detailedAnalysis();
 
     }
