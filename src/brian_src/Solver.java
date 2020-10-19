@@ -110,6 +110,7 @@ public class Solver {
     public void detailedAnalysis() {
         // Solve
         solve(game.startPosition());
+        TicTacTwo temp = new TicTacTwo();
         TreeMap<Integer, Integer[]> results = new TreeMap<>(); // needs to be sorted
         for (GameState gs : statemap.values()) {
             Integer[] stateArray = {0, 0, 0};
@@ -170,4 +171,18 @@ public class Solver {
         s.detailedAnalysis();
 
     }
+
+    /*ArrayList<Integer> list = new ArrayList<>();
+        for (Integer hash : statemap.keySet()) {
+            GameState gs = statemap.get(hash);
+            if (gs.remoteness() == 0 && gs.positionValue() == PositionValue.LOSE) {
+                list.add(hash);
+            }
+        }
+        System.out.println("Start of print");
+        java.util.Collections.sort(list);
+        for (Integer hash: list){
+            temp.printPos(hash);
+            // Need to print to file
+        }*/
 }

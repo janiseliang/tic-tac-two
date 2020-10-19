@@ -70,12 +70,12 @@ public class TicTacTwo extends TicTacToe{
             if (doMoveHelper(board, move / 10 - 1) == -1) {
                 return -1;
             }
-            // Win check
-            if (super.isWin(board) == 0) {
+            // Win check (disabled)
+            //if (super.isWin(board) == 0) {
                 if (doMoveHelper(board, move % 10) == -1) {
                     return -1;
                 }
-            }
+            //}
         }
         //Swap move
         board[9] = 1 - board[9];
@@ -103,7 +103,7 @@ public class TicTacTwo extends TicTacToe{
                 }
                 break;
             case 1:
-                // Y moves
+                // O moves
                 switch(board[move]) {
                     case 4:
                     case 5:
@@ -129,7 +129,7 @@ public class TicTacTwo extends TicTacToe{
         for (int i = 0; i < 9; i++) {
             if (board[i] != 1 && board[i] != 2) {
                 moveList.add(i);
-                if (board[i] == 0) {
+                if (board[i] != 5 && board[i] != whoseTurn(board) + 2) {
                     doubleInSame.add(i);
                 }
             }
